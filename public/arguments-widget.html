@@ -11,6 +11,11 @@
             height: 800px;
         }
     </style>
+    <script src="https://citizenos-citizenosfe-web-test.herokuapp.com/js/widgets.arguments.js"></script>
+    <script>
+        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 'f21b10b5-9147-4b12-b6f1-1d2380ff752b', 'myCitizenOSWidgetElementId');
+        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'f21b10b5-9147-4b12-b6f1-1d2380ff752b');
+    </script>
 </head>
 <body>
     <h4>CitizenOS Partner Demos</h4>
@@ -27,12 +32,15 @@
     </p>
 
     <h2>Example</h2>
-    <p>
-        Src: <a href="https://citizenos-citizenosfe-web-test.herokuapp.com/en/widgets/topics/f21b10b5-9147-4b12-b6f1-1d2380ff752b/arguments">https://citizenos-citizenosfe-web-test.herokuapp.com/en/widgets/topics/f21b10b5-9147-4b12-b6f1-1d2380ff752b/arguments</a>
-    </p>
+    <pre>
+        // Load inside your own element with id 'myCitizenOSWidgetElementId'
+        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('f21b10b5-9147-4b12-b6f1-1d2380ff752b', 'myCitizenOSWidgetElementId');
+        // Load as a last element in body with id auto generated
+        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('f21b10b5-9147-4b12-b6f1-1d2380ff752b');
+    </pre>
     <p>
         <b>NOTE:</b> Everything inside <span style="color:green; border: 3px solid green;">green</span> is served by CitizenOS
     </p>
-    <iframe src="https://citizenos-citizenosfe-web-test.herokuapp.com/en/widgets/topics/f21b10b5-9147-4b12-b6f1-1d2380ff752b/arguments"></iframe>
+    <div id="myCitizenOSWidgetElementId"></div>
 </body>
 </html>
