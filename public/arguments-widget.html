@@ -14,10 +14,11 @@
     <script src="https://citizenos-citizenosfe-web-test.herokuapp.com/js/widgets.arguments.js"></script>
     <!--script src="https://dev.citizenos.com:3001/js/widgets.arguments.js"></script-->
     <script>
-        // Load inside your own element with id 'myCitizenOSWidgetElementId'
-        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', '2b5223c0-d2ca-495a-8849-a7d4b24faa3a', 'myCitizenOSWidgetElementId');
+        // Load with Partner entity ID and Partner ID
+        // Load inside your own element with id 'myCitizenOSWidgetElementId'.
+        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSWidgetElementId');
         // Load as a last element in body with id auto generated
-        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', '87287210-e215-4e98-8630-5b0ef3b2e5a8');
+        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
     </script>
 </head>
 <body>
@@ -27,13 +28,6 @@
         Widget for embedding CitizenOS arguments system into your webapp.
     </p>
 
-    <p>
-    <h3>Implementation notes:</h3>
-    <ul>
-        <li>FOR NOW Assumes Partner to keep the Partner content id to Topic id mapping to know what Topic id to use to open the IFRAME. Our side partner object mapping coming soon.</li>
-    </ul>
-    </p>
-
     <h2>Example</h2>
     Add following script to your page:
     <pre>
@@ -41,8 +35,9 @@
     </pre>
     Load the widget:
     <pre>
-        // Load inside your own element with id 'myCitizenOSWidgetElementId'
-        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', '2b5223c0-d2ca-495a-8849-a7d4b24faa3a', 'myCitizenOSWidgetElementId');
+        // Load with Partner entity ID and Partner ID
+        // Load inside your own element with id 'myCitizenOSWidgetElementId'.
+        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSWidgetElementId');
         // Load as a last element in body with id auto generated
         var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', '87287210-e215-4e98-8630-5b0ef3b2e5a8');
     </pre>
