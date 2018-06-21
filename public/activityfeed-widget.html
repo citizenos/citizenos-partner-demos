@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CitizenOS Partner Demos - Arguments Widget</title>
+    <title>CitizenOS Partner Demos - Activity Feed Widget</title>
     <link rel="stylesheet" type="text/css" href="/styles/default.css">
     <style>
         iframe {
@@ -16,16 +16,19 @@
     <script>
         // Load with Partner entity ID and Partner ID
         // Load inside your own element with id 'myCitizenOSWidgetElementId'.
-        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSArgumentWidgetElementId');
+        var argumentsWidget1 = window.CITIZENOS.widgets.ActivityFeed('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId1');
+        // Load with Partner ID to get the feed of all Partner Topics
+        var argumentsWidget2 = window.CITIZENOS.widgets.ActivityFeed('ru', null, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId2');
+        // Load the feed of all public Topics in CitizenOS
         // Load as a last element in body with id auto generated
-        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
+        var argumentsWidget3 = window.CITIZENOS.widgets.ActivityFeed('en');
     </script>
 </head>
 <body>
     <h4>CitizenOS Partner Demos</h4>
-    <h1>Arguments Widget</h1>
+    <h1>Activity Feed Widget</h1>
     <p>
-        Widget for embedding CitizenOS arguments system into your webapp.
+        Widget for embedding CitizenOS activity feed into your webapp.
     </p>
 
     <h2>Example</h2>
@@ -37,9 +40,12 @@
     <pre>
         // Load with Partner entity ID and Partner ID
         // Load inside your own element with id 'myCitizenOSWidgetElementId'.
-        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSArgumentWidgetElementId');
+        var argumentsWidget1 = window.CITIZENOS.widgets.ActivityFeed('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId1');
+        // Load with Partner ID to get the feed of all Partner Topics
+        var argumentsWidget2 = window.CITIZENOS.widgets.ActivityFeed('ru', null, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId2');
+        // Load the feed of all public Topics in CitizenOS
         // Load as a last element in body with id auto generated
-        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
+        var argumentsWidget3 = window.CITIZENOS.widgets.ActivityFeed('en');
     </pre>
     Widget wrapper element configuration:
     <ul>
@@ -48,6 +54,7 @@
     <p>
         <b>NOTE:</b> Everything inside <span style="color:green; border: 3px solid green;">green</span> is served by CitizenOS
     </p>
-    <div id="myCitizenOSArgumentWidgetElementId"></div>
+    <div id="myCitizenOSActivityWidgetElementId1" data-height="100%" style="width:50%; float: left; height: 600px;"></div>
+    <div id="myCitizenOSActivityWidgetElementId2" data-height="600px" style="width:300px; float: left; background: lightgray;"></div>
 </body>
 </html>
