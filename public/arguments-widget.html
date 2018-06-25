@@ -14,6 +14,7 @@
     <script src="https://citizenos-citizenosfe-web-test.herokuapp.com/js/widgets.js"></script>
     <!--script src="https://dev.citizenos.com:3001/js/widgets.js"></script-->
     <script>
+        // NB! Very important to invoke the widget constructors inside vanilla 'DOMContentLoaded' or  $(document).ready() in case of JQUERY
         document.addEventListener('DOMContentLoaded', function () {
             // Load with Partner entity ID and Partner ID
             // Load inside your own element with id 'myCitizenOSWidgetElementId'.
