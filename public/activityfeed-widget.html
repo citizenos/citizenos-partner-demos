@@ -14,14 +14,30 @@
     <script src="https://citizenos-citizenosfe-web-test.herokuapp.com/js/widgets.js"></script>
     <!--script src="https://dev.citizenos.com:3001/js/widgets.js"></script-->
     <script>
-        // Load with Partner entity ID and Partner ID
-        // Load inside your own element with id 'myCitizenOSActivityWidgetElementId1'.
-        var activityWidget1 = window.CITIZENOS.widgets.ActivityFeed('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId1');
-        // Load with Partner ID to get the feed of all Partner Topics
-        var activityWidget2 = window.CITIZENOS.widgets.ActivityFeed('ru', null, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId2');
-        // Load the feed of all public Topics in CitizenOS
-        // Load as a last element in body with id auto generated
-        var activityWidget3 = window.CITIZENOS.widgets.ActivityFeed('en');
+        // NB! Very important to invoke the widget constructors inside vanilla 'DOMContentLoaded' or  $(document).ready() in case of JQUERY
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load with Partner entity ID and Partner ID
+            // Load inside your own element with id 'myCitizenOSActivityWidgetElementId1'.
+            var activityWidget1 = window.CITIZENOS.widgets.ActivityFeed('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId1');
+            // Your own click handler
+            activityWidget1.addEventListener('citizenos.widget.click', function (e) {
+                console.log('activityWidget1', 'citizenos.widget.click', e.detail.topic, e.detail.topic.sourcePartnerObjectId);
+                //window.location.href = '/?p=' + encodeURIComponent(e.detail.topic.sourcePartnerObjectId);
+            });
+            // Load with Partner ID to get the feed of all Partner Topics
+            var activityWidget2 = window.CITIZENOS.widgets.ActivityFeed('ru', null, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId2');
+            // Your own click handler
+            activityWidget2.addEventListener('citizenos.widget.click', function (e) {
+                console.log('activityWidget2', 'citizenos.widget.click', e.detail.topic, e.detail.topic.sourcePartnerObjectId);
+            });
+            // Load the feed of all public Topics in CitizenOS
+            // Load as a last element in body with id auto generated
+            var activityWidget3 = window.CITIZENOS.widgets.ActivityFeed('en');
+            // Your own click handler
+            activityWidget3.addEventListener('citizenos.widget.click', function (e) {
+                console.log('activityWidget3', 'citizenos.widget.click', e.detail.topic, e.detail.topic.sourcePartnerObjectId);
+            });
+        });
     </script>
 </head>
 <body>
@@ -38,18 +54,36 @@
     </pre>
     Load the widget:
     <pre>
-        // Load with Partner entity ID and Partner ID
-        // Load inside your own element with id 'myCitizenOSWidgetElementId'.
-        var argumentsWidget1 = window.CITIZENOS.widgets.ActivityFeed('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId1');
-        // Load with Partner ID to get the feed of all Partner Topics
-        var argumentsWidget2 = window.CITIZENOS.widgets.ActivityFeed('ru', null, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId2');
-        // Load the feed of all public Topics in CitizenOS
-        // Load as a last element in body with id auto generated
-        var argumentsWidget3 = window.CITIZENOS.widgets.ActivityFeed('en');
+        // NB! Very important to invoke the widget constructors inside vanilla 'DOMContentLoaded' or  $(document).ready() in case of JQUERY
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load with Partner entity ID and Partner ID
+            // Load inside your own element with id 'myCitizenOSActivityWidgetElementId1'.
+            var activityWidget1 = window.CITIZENOS.widgets.ActivityFeed('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId1');
+            // Your own click handler
+            activityWidget1.addEventListener('citizenos.widget.click', function (e) {
+                console.log('activityWidget1', 'citizenos.widget.click', e.detail.topic, e.detail.topic.sourcePartnerObjectId);
+                //window.location.href = '/?p=' + encodeURIComponent(e.detail.topic.sourcePartnerObjectId);
+            });
+            // Load with Partner ID to get the feed of all Partner Topics
+            var activityWidget2 = window.CITIZENOS.widgets.ActivityFeed('ru', null, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSActivityWidgetElementId2');
+            // Your own click handler
+            activityWidget2.addEventListener('citizenos.widget.click', function (e) {
+                console.log('activityWidget2', 'citizenos.widget.click', e.detail.topic, e.detail.topic.sourcePartnerObjectId);
+            });
+            // Load the feed of all public Topics in CitizenOS
+            // Load as a last element in body with id auto generated
+            var activityWidget3 = window.CITIZENOS.widgets.ActivityFeed('en');
+            // Your own click handler
+            activityWidget3.addEventListener('citizenos.widget.click', function (e) {
+                console.log('activityWidget3', 'citizenos.widget.click', e.detail.topic, e.detail.topic.sourcePartnerObjectId);
+            });
+        });
     </pre>
     Widget wrapper element configuration:
     <ul>
-        <li><b>data-height</b> - specify height for the iframe inside your own widget wrapper element. Value can be in any valid CSS height and one special value "auto" which resizes the wrapper to frame size. Default: auto</li>
+        <li><b>data-height</b> - specify height for the iframe inside your own widget wrapper element. Value can be in any valid CSS height and one special value "auto" which resizes the wrapper to
+            frame size. Default: auto
+        </li>
     </ul>
     <p>
         <b>NOTE:</b> Everything inside <span style="color:green; border: 3px solid green;">green</span> is served by CitizenOS
