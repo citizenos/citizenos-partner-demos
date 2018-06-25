@@ -14,11 +14,13 @@
     <script src="https://citizenos-citizenosfe-web-test.herokuapp.com/js/widgets.js"></script>
     <!--script src="https://dev.citizenos.com:3001/js/widgets.js"></script-->
     <script>
-        // Load with Partner entity ID and Partner ID
-        // Load inside your own element with id 'myCitizenOSWidgetElementId'.
-        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSArgumentWidgetElementId');
-        // Load as a last element in body with id auto generated
-        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load with Partner entity ID and Partner ID
+            // Load inside your own element with id 'myCitizenOSWidgetElementId'.
+            var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSArgumentWidgetElementId');
+            // Load as a last element in body with id auto generated
+            var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
+        });
     </script>
 </head>
 <body>
@@ -35,15 +37,19 @@
     </pre>
     Load the widget:
     <pre>
-        // Load with Partner entity ID and Partner ID
-        // Load inside your own element with id 'myCitizenOSWidgetElementId'.
-        var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSArgumentWidgetElementId');
-        // Load as a last element in body with id auto generated
-        var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load with Partner entity ID and Partner ID
+            // Load inside your own element with id 'myCitizenOSWidgetElementId'.
+            var argumentsWidget1 = window.CITIZENOS.widgets.Argument('et', 14801, '0c580018-ed74-42cb-b0e4-8df654ddd42c', 'myCitizenOSArgumentWidgetElementId');
+            // Load as a last element in body with id auto generated
+            var argumentsWidget2 = window.CITIZENOS.widgets.Argument('ru', 'a5212731-02ad-4ebf-a824-e3827cdff716');
+        });
     </pre>
     Widget wrapper element configuration:
     <ul>
-        <li><b>data-height</b> - specify height for the iframe inside your own widget wrapper element. Value can be in any valid CSS height and one special value "auto" which resizes the wrapper to frame size. Default: auto</li>
+        <li><b>data-height</b> - specify height for the iframe inside your own widget wrapper element. Value can be in any valid CSS height and one special value "auto" which resizes the wrapper to
+            frame size. Default: auto
+        </li>
     </ul>
     <p>
         <b>NOTE:</b> Everything inside <span style="color:green; border: 3px solid green;">green</span> is served by CitizenOS
